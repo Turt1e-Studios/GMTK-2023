@@ -44,6 +44,6 @@ public class ShieldMovement : MonoBehaviour
         transform.position = _charPosition + new Vector3(changeX, changeY, 0);
         
         // Point towards char
-        transform.right = character.transform.position - transform.position; 
+        transform.up = transform.position - character.transform.position; 
     }
 }
