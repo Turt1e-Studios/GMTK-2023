@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+// "Character" refers to the object that the shield is moving around that the player cannot control.
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float timePerDirectionChange;
