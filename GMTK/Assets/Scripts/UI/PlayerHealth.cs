@@ -10,12 +10,6 @@ public class PlayerHealth : MonoBehaviour
         _health = 3;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void LoseHealth()
     {
         _health--;
