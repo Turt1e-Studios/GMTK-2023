@@ -8,6 +8,7 @@ public class MoveForward : MonoBehaviour
     public Vector2 Velocity
     {
         set => _velocity = value;
+        get => _velocity;
     }
     private Vector2 _velocity;
 
