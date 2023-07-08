@@ -7,12 +7,6 @@ public class ShieldMovement : MonoBehaviour
     [SerializeField] private GameObject character;
     [SerializeField] private float radius;
     private Vector3 _charPosition;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Shield will always point towards the character but also be the same relative position as the cursor
     void Update()

@@ -6,6 +6,8 @@ public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float timePerDirectionChange;
     [SerializeField] private float speed;
+
+    public Vector2 Direction => _direction;
     private Vector2 _direction;
     
     // Start is called before the first frame update
