@@ -16,11 +16,11 @@ public class PlayerHealth : MonoBehaviour
     public void LoseHealth()
     {
         _health--;
+        Destroy(gameObject.transform.GetChild(_health).gameObject);
         if (_health <= 0)
         {
             GameOver();
         }
-        Destroy(gameObject.transform.GetChild(_health).gameObject);
     }
 
     private void GameOver()
