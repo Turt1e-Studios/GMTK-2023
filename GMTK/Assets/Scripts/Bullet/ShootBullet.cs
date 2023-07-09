@@ -26,5 +26,10 @@ public class ShootBullet : MonoBehaviour
         {
             bullet.GetComponent<MoveForward>().Velocity = Random.insideUnitCircle.normalized * bulletMultiplier;
         }
+        else
+        {
+            bullet.GetComponent<Homing>().SpeedMultiplier = bulletMultiplier;
+            Debug.Log(bullet.GetComponent<Homing>().SpeedMultiplier);
+        }
     }
 }

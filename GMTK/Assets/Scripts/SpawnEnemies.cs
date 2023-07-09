@@ -7,6 +7,8 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private List<GameObject> enemies;
     [SerializeField] private float initialSpawnRate;
     [SerializeField] private float spawnRateChange;
+    [SerializeField] private GameObject boss;
+    [SerializeField] private float bossSpawnTime;
 
     private const float MinimumSpawnRate = 1.0f;
     private float spawnRate;
@@ -17,6 +19,13 @@ public class SpawnEnemies : MonoBehaviour
         spawnRate = initialSpawnRate;
         Spawn();
         StartCoroutine(EnemySpawn());
+        InvokeRepeating(nameof(BossSpawn), bossSpawnTime, bossSpawnTime);
+    }
+
+    private void BossSpawn()
+    {
+        Vector3 newPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-5f, 5f), 0);
+        Instantiate(boss, newPosition, transform.rotation);
     }
 
     private IEnumerator EnemySpawn()

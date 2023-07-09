@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Homing : MonoBehaviour
 {
+    public float SpeedMultiplier { get; set; }
     [SerializeField] private float speed;
     private GameObject objectFollowing;
     
@@ -15,7 +16,7 @@ public class Homing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate((objectFollowing.transform.position - transform.position).normalized * (speed * Time.deltaTime));
+        transform.Translate((objectFollowing.transform.position - transform.position).normalized * (speed * SpeedMultiplier * Time.deltaTime));
     }
 
     private void OnCollisionEnter2D(Collision2D col)
