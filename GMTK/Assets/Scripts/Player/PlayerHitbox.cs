@@ -7,6 +7,7 @@ public class PlayerHitbox : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet"))
         {
+            FindObjectOfType<AudioManager>().Play("TakingDamage");
             ui.GetComponent<PlayerHealth>().LoseHealth();
             Destroy(col.gameObject);
         }

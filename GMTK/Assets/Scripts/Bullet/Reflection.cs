@@ -16,6 +16,7 @@ public class Reflection : MonoBehaviour
             Vector2 n = col.transform.up; // the respective normal vector
             gameObject.GetComponent<MoveForward>().Velocity = d - 2 * n.normalized * (Vector2.Dot(d, n));
             gameObject.GetComponent<SpriteRenderer>().sprite = reflectedSprite;
+            FindObjectOfType<AudioManager>().Play("Reflection");
         }
     }
 }

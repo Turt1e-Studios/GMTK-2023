@@ -35,6 +35,7 @@ public class Homing : MonoBehaviour
             SelectTarget();
             _hasReflected = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = reflectedSprite;
+            FindObjectOfType<AudioManager>().Play("Reflection");
         }
         // Once it's been reflected, it can also hit other enemies
         else if (col.gameObject.CompareTag("Enemy") && _hasReflected)
