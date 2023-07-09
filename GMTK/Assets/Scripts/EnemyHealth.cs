@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
+    [SerializeField] private int pointsWorth;
     private int _health;
 
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
         _health--;
         if (_health <= 0)
         {
+            GameObject.Find("Score").GetComponent<Score>().ChangeScore(pointsWorth);
             Destroy(gameObject);
         }
     }
