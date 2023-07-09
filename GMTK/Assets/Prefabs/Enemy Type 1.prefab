@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timePerDirectionChange: 1
   speed: 3
+  goesTowardsCenter: 0
 --- !u!114 &-1621082221949167900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 134839550744647619, guid: 64a96675c1dbe75479d4d67b487d04fb, type: 3}
+  timeUntilBeginShoot: 1
   bulletMultiplier: 1
   cooldown: 0.5
   isInSameDirection: 1
+  isHoming: 0
 --- !u!61 &-1007634342031857170
 BoxCollider2D:
   m_ObjectHideFlags: 0

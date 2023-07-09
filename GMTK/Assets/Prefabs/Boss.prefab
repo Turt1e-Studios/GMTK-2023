@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 134839550744647619, guid: 3c036545ec7a391488a0aa49fb57327e, type: 3}
+  timeUntilBeginShoot: 5
   bulletMultiplier: 3
   cooldown: 4
   isInSameDirection: 0

@@ -622,7 +622,7 @@ MonoBehaviour:
   - {fileID: 484473341949055668, guid: 18c8c1bc9ecdb304cacc03dc51e569aa, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
-  initialSpawnRate: 7
+  initialSpawnRate: 5
   spawnRateChange: 0.1
   boss: {fileID: 4633139722493254021, guid: 80298e1152e763c498be55b41c92cbca, type: 3}
   bossSpawnTime: 90
