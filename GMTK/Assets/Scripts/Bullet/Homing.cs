@@ -6,6 +6,7 @@ public class Homing : MonoBehaviour
 {
     public float SpeedMultiplier { get; set; }
     [SerializeField] private float speed;
+    [SerializeField] private Sprite reflectedSprite;
     
     private GameObject _objectFollowing;
     private bool _hasReflected;
@@ -33,6 +34,7 @@ public class Homing : MonoBehaviour
         {
             SelectTarget();
             _hasReflected = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = reflectedSprite;
         }
         // Once it's been reflected, it can also hit other enemies
         else if (col.gameObject.CompareTag("Enemy") && _hasReflected)

@@ -18,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log("taking damage");
         Invoke(nameof(PlaySound), 0.1f);
         _health--;
         if (_health <= 0)

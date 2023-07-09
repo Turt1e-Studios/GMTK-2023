@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Reflection : MonoBehaviour
 {
+    [SerializeField] private Sprite reflectedSprite;
     public bool hasReflected;
     
     // https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector
@@ -14,6 +15,7 @@ public class Reflection : MonoBehaviour
             Vector2 d = gameObject.GetComponent<MoveForward>().Velocity;
             Vector2 n = col.transform.up; // the respective normal vector
             gameObject.GetComponent<MoveForward>().Velocity = d - 2 * n.normalized * (Vector2.Dot(d, n));
+            gameObject.GetComponent<SpriteRenderer>().sprite = reflectedSprite;
         }
     }
 }

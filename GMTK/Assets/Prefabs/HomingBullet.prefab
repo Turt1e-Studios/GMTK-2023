@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  reflectedSprite: {fileID: 21300000, guid: 1d24ae7b9d789b34892c3bb9df33fda0, type: 3}
 --- !u!96 &-3382594035310209323
 TrailRenderer:
   serializedVersion: 2
