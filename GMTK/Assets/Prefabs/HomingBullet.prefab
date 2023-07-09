@@ -10,14 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 134839550744647621}
   - component: {fileID: 134839550744647618}
-  - component: {fileID: 6688032224737799611}
   - component: {fileID: -405930446261797310}
   - component: {fileID: 8068185747126004834}
   - component: {fileID: 4929568969946241753}
-  - component: {fileID: 3689253461792177458}
   - component: {fileID: -4571194685170397285}
+  - component: {fileID: -679348847775369089}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: HomingBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2b9ebcb319be79408a9f37262b2995f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 850755ec240a7ed408e2b44d2b28f046, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,19 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6688032224737799611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134839550744647619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158202b34d8473f469fbcdde165f626f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &-405930446261797310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,19 +155,6 @@ CircleCollider2D:
   m_Offset: {x: -0.01, y: 0.01}
   serializedVersion: 2
   m_Radius: 0.05
---- !u!114 &3689253461792177458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134839550744647619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94cf574b1f4ed804984d6ea00b4c32f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasReflected: 0
 --- !u!50 &-4571194685170397285
 Rigidbody2D:
   serializedVersion: 4
@@ -203,3 +176,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-679348847775369089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134839550744647619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1160fe012275e8a469133eba02c3df63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8

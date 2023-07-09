@@ -8,6 +8,7 @@ public class ShootBullet : MonoBehaviour
     [SerializeField] private float bulletMultiplier;
     [SerializeField] private float cooldown;
     [SerializeField] private bool isInSameDirection;
+    [SerializeField] private bool isHoming;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class ShootBullet : MonoBehaviour
         {
             bullet.GetComponent<MoveForward>().Velocity = GetComponent<CharacterMovement>().Direction * bulletMultiplier;
         }
-        else
+        else if (!isHoming)
         {
             bullet.GetComponent<MoveForward>().Velocity = Random.insideUnitCircle.normalized * bulletMultiplier;
         }

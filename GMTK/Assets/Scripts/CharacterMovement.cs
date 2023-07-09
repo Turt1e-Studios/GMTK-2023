@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float timePerDirectionChange;
     [SerializeField] private float speed;
+    [SerializeField] private bool goesTowardsCenter;
 
     public Vector2 Direction => _direction;
     private Vector2 _direction;
@@ -33,6 +34,13 @@ public class CharacterMovement : MonoBehaviour
 
     void ChangeDirection()
     {
-        _direction = Random.insideUnitCircle.normalized;
+        if (goesTowardsCenter)
+        {
+            _direction = (new Vector3(Random.Range(-5f, 5f), Random.Range(-2.5f, 2.5f), 0) - transform.position).normalized;
+        }
+        else
+        {
+            _direction = Random.insideUnitCircle.normalized;
+        }
     }
 }
