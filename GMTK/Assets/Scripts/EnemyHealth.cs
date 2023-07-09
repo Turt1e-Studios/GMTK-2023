@@ -38,9 +38,13 @@ public class EnemyHealth : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet") && col.gameObject.GetComponent<Reflection>().hasReflected)
         {
-            Debug.Log("recieving collision with bullet");
             TakeDamage();
             Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            TakeDamage();
         }
     }
 }

@@ -10,10 +10,5 @@ public class PlayerHitbox : MonoBehaviour
             ui.GetComponent<PlayerHealth>().LoseHealth();
             Destroy(col.gameObject);
         }
-
-        if (col.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(col.gameObject);
-        }
     }
 }

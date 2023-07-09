@@ -622,7 +622,6 @@ MonoBehaviour:
   - {fileID: 484473341949055668, guid: 18c8c1bc9ecdb304cacc03dc51e569aa, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
-  - {fileID: 7767590633782171510, guid: 661f5c58e1152d3429317ede43ad16e4, type: 3}
   initialSpawnRate: 7
   spawnRateChange: 0.1
 --- !u!1 &1204333074
