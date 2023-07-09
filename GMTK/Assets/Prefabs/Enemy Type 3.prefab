@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 134839550744647619, guid: 3c036545ec7a391488a0aa49fb57327e, type: 3}
-  bulletMultiplier: 1
+  bulletMultiplier: 1.5
   cooldown: 4
   isInSameDirection: 0
   isHoming: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4de8fffaafea8a44bc6be1c5a0ceff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
   pointsWorth: 3
   hitSound: {fileID: 8300000, guid: 8ccefd7d6b474464e9bd662c243f1e0f, type: 3}
 --- !u!82 &7291062527936542814
