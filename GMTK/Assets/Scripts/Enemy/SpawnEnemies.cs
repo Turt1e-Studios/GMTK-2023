@@ -5,21 +5,50 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private List<GameObject> enemies;
-    [SerializeField] private float initialSpawnRate;
     [SerializeField] private float spawnRateChange;
     [SerializeField] private GameObject boss;
     [SerializeField] private float bossSpawnTime;
 
-    private const float MinimumSpawnRate = 1.0f;
-    private float spawnRate;
+    private float _minimumSpawnRate;
+    private float _spawnRate;
 
     // Start is called before the first frame update
     private void Start()
     {
-        spawnRate = initialSpawnRate;
+        // Change spawn rate depending on the difficulty (from main menu)
+        float difficulty = PlayerPrefs.GetInt("Difficulty");
+        if (!PlayerPrefs.HasKey("Difficulty"))
+        {
+            Debug.Log("doesn't have difficulty key");
+            _spawnRate = 5f;
+        }
+        else
+        {
+            _spawnRate = difficulty switch
+            {
+                1 => 7f,
+                2 => 5f,
+                3 => 3f,
+                _ => _spawnRate
+            };
+            _minimumSpawnRate = difficulty switch
+            {
+                1 => 5f,
+                2 => 3f,
+                3 => 1f,
+                _ => _minimumSpawnRate
+            };
+        }
+        Debug.Log(_spawnRate);
+        
         Spawn();
         StartCoroutine(EnemySpawn());
-        InvokeRepeating(nameof(BossSpawn), bossSpawnTime, bossSpawnTime);
+
+        // Boss doesn't spawn for easy difficulty
+        if (difficulty != 1)
+        {
+            InvokeRepeating(nameof(BossSpawn), bossSpawnTime, bossSpawnTime);
+        }
     }
 
     private void BossSpawn()
@@ -32,14 +61,15 @@ public class SpawnEnemies : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(spawnRate);
+            yield return new WaitForSeconds(_spawnRate);
 
+            Debug.Log("Spawnrate: " + _spawnRate);
             Spawn();
             
-            spawnRate -= spawnRateChange;
-            if (spawnRate < MinimumSpawnRate)
+            _spawnRate -= spawnRateChange;
+            if (_spawnRate < _minimumSpawnRate)
             {
-                spawnRate = MinimumSpawnRate;
+                _spawnRate = _minimumSpawnRate;
             }
         }
     }
