@@ -625,7 +625,7 @@ MonoBehaviour:
   initialSpawnRate: 7
   spawnRateChange: 0.1
   boss: {fileID: 4633139722493254021, guid: 80298e1152e763c498be55b41c92cbca, type: 3}
-  bossSpawnTime: 45
+  bossSpawnTime: 180
 --- !u!1 &1204333074
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6877a780e8191754f8472f34c4f8290f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

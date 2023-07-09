@@ -10,8 +10,11 @@ public class ShootBullet : MonoBehaviour
     [SerializeField] private bool isInSameDirection;
     [SerializeField] private bool isHoming;
 
+    private GameObject player;
+
     private void Start()
     {
+        player = GameObject.Find("Character");
         InvokeRepeating(nameof(Shoot), 0.1f, cooldown);
     }
 
@@ -24,7 +27,7 @@ public class ShootBullet : MonoBehaviour
         }
         else if (!isHoming)
         {
-            bullet.GetComponent<MoveForward>().Velocity = Random.insideUnitCircle.normalized * bulletMultiplier;
+            bullet.GetComponent<MoveForward>().Velocity = (player.transform.position - transform.position).normalized * bulletMultiplier;
         }
         else
         {
