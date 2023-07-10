@@ -16,6 +16,10 @@ public class PlayerHealth : MonoBehaviour
     public void LoseHealth()
     {
         _health--;
+        if (gameOverScreen.IsGameOver)
+        {
+            return;
+        }
         Destroy(gameObject.transform.GetChild(_health).gameObject);
         if (_health <= 0)
         {

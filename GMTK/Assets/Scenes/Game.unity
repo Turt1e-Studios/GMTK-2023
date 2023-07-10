@@ -165,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426343753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 586.1384, y: 582.70856, z: -11.379633}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468075755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14022392, y: -0.5850903, z: -9.651691}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -668,8 +668,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106733186}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7018433, y: 5.6220703, z: -0.1655561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -697,7 +697,6 @@ MonoBehaviour:
   - {fileID: 484473341949055668, guid: 18c8c1bc9ecdb304cacc03dc51e569aa, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
   - {fileID: 5594027340405839888, guid: 4014f7fc15a8fea46a6c54225af40a92, type: 3}
-  initialSpawnRate: 5
   spawnRateChange: 0.1
   boss: {fileID: 4633139722493254021, guid: 80298e1152e763c498be55b41c92cbca, type: 3}
   bossSpawnTime: 90
@@ -1474,6 +1473,7 @@ MonoBehaviour:
   pointsText: {fileID: 6773337134130682323}
   highScoreText: {fileID: 6773337133797112214}
   currentPointsText: {fileID: 6773337135246516218}
+  audioManager: {fileID: 468075755}
 --- !u!82 &6773337134119822809
 AudioSource:
   m_ObjectHideFlags: 0

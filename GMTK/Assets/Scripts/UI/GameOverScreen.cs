@@ -7,16 +7,17 @@ public class GameOverScreen : MonoBehaviour
     public TextMeshProUGUI pointsText;
     public TextMeshProUGUI highScoreText;
     [SerializeField] private TextMeshProUGUI currentPointsText;
-    
-    private bool _isGameOver;
+    [SerializeField] private GameObject audioManager;
+
+    public bool IsGameOver { get; private set; }
 
     public void Setup(int score)
     {
-        if (_isGameOver)
+        if (IsGameOver)
         {
             return;
         }
-        _isGameOver = true;
+        IsGameOver = true;
         
         if (score > PlayerPrefs.GetInt("HighScore", 0))
         {
@@ -31,6 +32,9 @@ public class GameOverScreen : MonoBehaviour
 
         // SFX
         FindObjectOfType<AudioManager>().Play("GameOver");
+        
+        // Disable audio when game over
+        audioManager.SetActive(false);
     }
 
     public void RestartButton()
